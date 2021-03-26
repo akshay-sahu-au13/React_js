@@ -56,17 +56,15 @@ function BookList() {
 }
 
 const Book = ()=> {
-  return (
-  <article className ='book'>
+  return (<article className ='book'>
     <Image/>
     <Title/>
     <Author/>
-  </article>
-  );
+  </article>)
 }
-const Image = ()=> <img src="https://images-na.ssl-images-amazon.com/images/I/51D6Cob1LFL._SX375_BO1,204,203,200_.jpg" alt="Book"/>
+const Image = ()=> <img src="https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg" alt="Book"/>
 
-const Title = ()=> <h1>A Brief History of Modern India (2019-2020 Edition) by Spectrum Books</h1>
+const Title = ()=> <h1>A Brief History of Modern India </h1>
 
 const Author = ()=> <h4>Rajiv Ahir</h4>
 
