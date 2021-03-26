@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+// Import CSS
+import './index.css';
+
+
 
 // stateless functional component
 // always return JSX
@@ -45,7 +49,6 @@ function BookList() {
       <Book/>
       <Book/>
       <Book/>
-
     </section>
   );
 }
