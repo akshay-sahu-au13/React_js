@@ -56,16 +56,17 @@ function BookList() {
 }
 
 const Book = ()=> {
-  return (<article className ='book'>
-    <Image/>
-    <Title/>
-    <Author/>
-  </article>)
+  return (
+  <article className ='book'>
+    
+    <img src="https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg" alt="Book"/>
+    <h1>A Brief History of Modern India </h1>
+    <h4 >Rajiv Ahir</h4>
+  
+  </article>
+  
+  );
 }
-const Image = ()=> <img src="https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg" alt="Book"/>
 
-const Title = ()=> <h1>A Brief History of Modern India </h1>
-
-const Author = ()=> <h4 style={{color:'#617d98', fontSize:'0.75rem', margin:'0.25rem'}}>Rajiv Ahir</h4>
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
