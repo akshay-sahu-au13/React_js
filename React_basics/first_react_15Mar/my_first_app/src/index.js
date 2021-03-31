@@ -42,31 +42,58 @@ import './index.css';
 
 // ReactDom.render(<Greeting />  , document.getElementById('root'));
 
+// ------------------------------------- -till 30th March - ------------------------------------- //
+// function BookList() {
+//   return (
+//     <section className = 'booklist'>
+//       <Book/>
+//       <Book/>
+   
+//     </section>
+//   );
+// }
+
+// const Book = ()=> {
+//   return (
+//   <article className ='book'>
+    
+//     <img src="https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg" alt="Book"/>
+//     <h1>A Brief History of Modern India </h1>
+//     <h4 >Rajiv Ahir</h4>
+  
+//   </article>
+  
+//   );
+// }
+// ------------------------------------- - - ------------------------------------- //
+
 function BookList() {
   return (
-    <section className = 'booklist'>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
+    <section className='booklist'>
+      <Book />
+      <Book />
+
     </section>
   );
 }
 
-const Book = ()=> {
+const img = "https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg";
+const title = 'A Brief History of Modern India';
+const author = "Rajiv Ahir";
+
+const Book = () => {
   return (
-  <article className ='book'>
-    
-    <img src="https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg" alt="Book"/>
-    <h1>A Brief History of Modern India </h1>
-    <h4 >Rajiv Ahir</h4>
-  
-  </article>
-  
+    <article className='book'>
+
+      <img src={img} alt="Book" />
+      <h1>{title} </h1>
+      <h4 >{author}</h4>
+
+    </article>
+
   );
 }
+
 
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
