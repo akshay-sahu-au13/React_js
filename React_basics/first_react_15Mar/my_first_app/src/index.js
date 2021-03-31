@@ -171,6 +171,46 @@ import './index.css';
 
 // --------------------------------Making the fields Dynamic 3-------------------------------------------//
 
+// const book1 = {
+//   img: "https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg",
+//   title: 'A Brief History of Modern India',
+//   author: "Rajiv Ahir"
+// }
+
+// const book2 = {
+//   img: "https://images-na.ssl-images-amazon.com/images/I/51NHKZC1a0L._SX324_BO1,204,203,200_.jpg",
+//   title: "Grandma's Bag of Stories",
+//   author: "Sudha Murty"
+// }
+
+
+// function BookList() {
+//   return (
+//     <section className='booklist'>
+//       <Book img = {book1.img} title = {book1.title} author = {book1.author} ></Book>
+//       <Book img={book2.img} title={book2.title} author={book2.author} ></Book>
+
+//     </section>
+//   );
+// }
+
+
+// const Book = ({img, title, author}) => {
+//   // console.log(props)
+//   return (
+//     <article className='book'>
+
+//       <img src={img} alt="Book" />
+//       <h1>{title} </h1>
+//       <h4 >{author}</h4>
+
+//     </article>
+
+//   );
+// }
+
+// ------------------------------- Children prop(content between opening and closing tag of Component) --------------------------- /
+
 const book1 = {
   img: "https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg",
   title: 'A Brief History of Modern India',
@@ -187,15 +227,14 @@ const book2 = {
 function BookList() {
   return (
     <section className='booklist'>
-      <Book img = {book1.img} title = {book1.title} author = {book1.author} ></Book>
+      <Book img={book1.img} title={book1.title} author={book1.author} ><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas libero, ea nostrum aperiam beatae aliquam laborum facilis perspiciatis soluta veritatis!</p></Book>
       <Book img={book2.img} title={book2.title} author={book2.author} ></Book>
 
     </section>
   );
 }
 
-
-const Book = ({img, title, author}) => {
+const Book = ({ img, title, author, children }) => {
   // console.log(props)
   return (
     <article className='book'>
@@ -203,6 +242,7 @@ const Book = ({img, title, author}) => {
       <img src={img} alt="Book" />
       <h1>{title} </h1>
       <h4 >{author}</h4>
+      {children}
 
     </article>
 
