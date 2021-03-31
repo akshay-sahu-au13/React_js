@@ -65,12 +65,42 @@ import './index.css';
   
 //   );
 // }
-// ------------------------------------- - - ------------------------------------- //
+
+// ------------------------------------- -31st March - ------------------------------------- //
+
+// function BookList() {
+//   return (
+//     <section className='booklist'>
+//       <Book />
+//       <Book />
+
+//     </section>
+//   );
+// }
+
+// const img = "https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg";
+// const title = 'A Brief History of Modern India';
+// const author = "Rajiv Ahir";
+
+// const Book = () => {
+//   return (
+//     <article className='book'>
+
+//       <img src={img} alt="Book" />
+//       <h1>{title} </h1>
+//       <h4 >{author}</h4>
+
+//     </article>
+
+//   );
+// }
+
+// ---------------------------------------------------------------------------//
 
 function BookList() {
   return (
     <section className='booklist'>
-      <Book />
+      <Book role="developer"/>
       <Book />
 
     </section>
@@ -81,19 +111,20 @@ const img = "https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330
 const title = 'A Brief History of Modern India';
 const author = "Rajiv Ahir";
 
-const Book = () => {
+const Book = (props) => {
+  console.log(props)
   return (
     <article className='book'>
 
       <img src={img} alt="Book" />
       <h1>{title} </h1>
       <h4 >{author}</h4>
+      <h4>{props.role}</h4>  // for testing props
 
     </article>
 
   );
 }
-
 
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
