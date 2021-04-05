@@ -8,6 +8,7 @@ import Book from './Book';
 // stateless functional component
 // always return JSX
 
+
 // --- JSX RULES ---
 // return single element
 // div/ section/ article or Fragment
