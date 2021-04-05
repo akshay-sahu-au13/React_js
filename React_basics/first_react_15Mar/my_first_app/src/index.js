@@ -250,7 +250,7 @@ import './index.css';
 // }
 
 
-//------------------------------------------------------------------------------------//
+//-----------------------------------Parsing inputs from array-------------------------------------------------//
 
 
 let books = [
@@ -281,7 +281,6 @@ function BookList() {
     <section className='booklist'>
       {books.map(book => {
         // console.log(book);
-        // const {img, title, author} = book;
          return <Book key={book._id} {...book}></Book>
       })
       
@@ -294,12 +293,18 @@ function BookList() {
 
 const Book = ({ img, title, author }) => {
   // console.log(props)
+  const clickHandler = (name=1)=>{
+    alert(`Hello ${name}`);
+  }
   return (
     <article className='book'>
 
       <img src={img} alt="Book" />
       <h1>{title} </h1>
       <h4 >{author}</h4>
+      <button type="button" onClick={clickHandler}>ClickMe</button>
+      <button type="button" onClick={()=>clickHandler("Akshay")}>SaymyName</button> 
+      {/* If we need to pass args */}
       
 
     </article>
@@ -307,5 +312,6 @@ const Book = ({ img, title, author }) => {
   );
 }
 
+// --------------------- Event Handlers ---------------------------//
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
