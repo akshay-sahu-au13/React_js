@@ -266,14 +266,22 @@ let books = [
   img: "https://images-na.ssl-images-amazon.com/images/I/51NHKZC1a0L._SX324_BO1,204,203,200_.jpg",
   title: "Grandma's Bag of Stories",
   author: "Sudha Murty"
-}
+  },
+
+  {
+    _id: 3,
+    img: "https://images-eu.ssl-images-amazon.com/images/I/51H2M2jWmvL._SX330_BO1,204,203,200_.jpg",
+    title: "The Great Train Journey",
+    author: "Ruskin Bond"
+  }
 ]
 
 function BookList() {
   return (
     <section className='booklist'>
-      {books.forEach(book => {
-        <Book key={book._id} title={book.title} author={book.author} img={book.img} ></Book>
+      {books.map(book => {
+        // console.log(book);
+        return <Book key={book._id} title={book.title} author={book.author} img={book.img} ></Book>
       })}
       
 
