@@ -281,12 +281,11 @@ function BookList() {
     <section className='booklist'>
       {books.map(book => {
         // console.log(book);
-        return <Book key={book._id} title={book.title} author={book.author} img={book.img} ></Book>
-      })}
+         return <Book key={book._id} title={book.title} author={book.author} img={book.img} ></Book>
+      })
       
-
-      {/* <Book img={book1.img} title={book1.title} author={book1.author} ><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas libero, ea nostrum aperiam beatae aliquam laborum facilis perspiciatis soluta veritatis!</p></Book>
-      <Book img={book2.img} title={book2.title} author={book2.author} ></Book> */}
+      }
+      {/* {console.log("BOOKS: ",books)} */}
 
     </section>
   );
