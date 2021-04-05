@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 // Import CSS
 import './index.css';
-
-
+import {books} from './books';
+import Book from './Book';
 
 // stateless functional component
 // always return JSX
@@ -252,30 +252,6 @@ import './index.css';
 
 //-----------------------------------Parsing inputs from array-------------------------------------------------//
 
-
-let books = [
-  {
-    _id:1,
-  img: "https://images-na.ssl-images-amazon.com/images/I/518saTcnTvL._SX330_BO1,204,203,200_.jpg",
-  title: 'A Brief History of Modern India',
-  author: "Rajiv Ahir"
-},
-
-{
-  _id:2,
-  img: "https://images-na.ssl-images-amazon.com/images/I/51NHKZC1a0L._SX324_BO1,204,203,200_.jpg",
-  title: "Grandma's Bag of Stories",
-  author: "Sudha Murty"
-  },
-
-  {
-    _id: 3,
-    img: "https://images-eu.ssl-images-amazon.com/images/I/51H2M2jWmvL._SX330_BO1,204,203,200_.jpg",
-    title: "The Great Train Journey",
-    author: "Ruskin Bond"
-  }
-]
-
 function BookList() {
   return (
     <section className='booklist'>
@@ -291,26 +267,7 @@ function BookList() {
   );
 }
 
-const Book = ({ img, title, author }) => {
-  // console.log(props)
-  const clickHandler = (name="Akshay")=>{
-    alert(`Hello ${name}`);
-  }
-  return (
-    <article className='book' onMouseOver={()=>console.log(`Hovered over: ${title}`)}>
 
-      <img src={img} alt="Book" />
-      <h1>{title} </h1>
-      <h4 >{author}</h4>
-      <button type="button" onClick={clickHandler}>ClickMe</button>
-      <button type="button" onClick={()=>clickHandler("Akshay")}>SaymyName</button> 
-      {/* If we need to pass args */}
-      
-
-    </article>
-
-  );
-}
 
 // --------------------- Event Handlers ---------------------------//
 
