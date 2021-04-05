@@ -293,11 +293,11 @@ function BookList() {
 
 const Book = ({ img, title, author }) => {
   // console.log(props)
-  const clickHandler = (name=1)=>{
+  const clickHandler = (name="Akshay")=>{
     alert(`Hello ${name}`);
   }
   return (
-    <article className='book'>
+    <article className='book' onMouseOver={()=>console.log(`Hovered over: ${title}`)}>
 
       <img src={img} alt="Book" />
       <h1>{title} </h1>
