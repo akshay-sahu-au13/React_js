@@ -1,7 +1,9 @@
 import React from 'react';
 
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
+  return <React.Fragment>
+    <h2>Random Title</h2>
+  </React.Fragment>
 };
 
 export default ErrorExample;
