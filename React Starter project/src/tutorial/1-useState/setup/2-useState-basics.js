@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 
 const UseStateBasics = () => {
   let title = "Random Title";
-
+  let changedTitle = "Welcome to react hooks 'useState'"
   let [text, setText] = useState(title);
   function changeTitle() {
-    setText("Welcome to react hooks 'useState'")
+    if (text == title){
+      setText(changedTitle);
+      title = "Welcome to react hooks 'useState'";
+    } else {
+      title = "Random Title";
+      setText(title)
+    }
   }
 
   console.log(text, setText);
