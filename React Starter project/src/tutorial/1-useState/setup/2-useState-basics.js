@@ -7,14 +7,14 @@ const UseStateBasics = () => {
   function changeTitle() {
     if (text == title){
       setText(changedTitle);
-      title = "Welcome to react hooks 'useState'";
+      // title = "Welcome to react hooks 'useState'";
     } else {
-      title = "Random Title";
+      // title = "Random Title";
       setText(title)
     }
   }
 
-  console.log(text, setText);
+  // console.log(text, setText);
   
   return (
   <React.Fragment>
