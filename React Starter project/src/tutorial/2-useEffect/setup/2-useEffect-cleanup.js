@@ -5,16 +5,22 @@ import React, { useState, useEffect } from 'react';
 
 const UseEffectCleanup = () => {
 
+  const mesaure = () => {
+    setValue(window.innerWidth)
+  };
+
   let [value, setValue] = useState(()=>{
     console.log(window.innerWidth)
     return window.innerWidth
   });
   useEffect(()=>{
     console.log("UseEffect");
-    window.addEventListener('resize', ()=> {
-      setValue(window.innerWidth)
-    })
-  },[])
+    window.addEventListener('resize', mesaure);
+    return ()=> {
+      console.log("Remove effect");
+      window.removeEventListener('resize', mesaure)
+    }
+  },[]);
 
 
   return <>
