@@ -9,7 +9,9 @@ const UseEffectBasics = () => {
 
   useEffect(()=> {
     console.log("UseEffect");
-    document.title = `Notifications (${value})`;
+    if (value>0){
+      document.title = `Notifications (${value})`;
+    }
 
   }); // If you leave the dependency array empty then the useeffect will only work for 1st render
 
