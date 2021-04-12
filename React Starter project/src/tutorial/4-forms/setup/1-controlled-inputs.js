@@ -9,12 +9,16 @@ const ControlledInputs = () => {
 
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
-  
+  const [people, setPeople] = useState([{firstName:"", email:""}])
   const handleSubmit = (e)=> {
     e.preventDefault();
     let firstName = e.target.firstName.value;
     let email = e.target.email.value;
     console.log(firstName,email)
+    const person = {firstName,email};
+    setPeople([...people, person]);
+    setFirstName("");
+    setEmail("");
 
   }
 
@@ -33,6 +37,17 @@ const ControlledInputs = () => {
       <button type="submit">Submit</button>
 
     </form>
+
+    {
+      people.map(person=> {
+        return <>
+          <div className="item">
+            <h4>{person.firstName}</h4>
+            <p>{person.email}</p>
+          </div>
+        </>
+      })
+    }
   </>;
 };
 
