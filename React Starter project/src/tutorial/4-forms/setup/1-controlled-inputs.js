@@ -26,11 +26,12 @@ const ControlledInputs = () => {
 
   }
 
-  return <>
+  return (
+  <>
     <article>
       <form className="form" onSubmit={(e)=>handleSubmit(e)}>
         <div className="form-control">
-          <label htmlFor="firstName">First Name : </label>
+          <label htmlFor="firstName">Name : </label>
           <input type="text" id="firstName" name="firstName" value={firstName} onChange={(e)=>setFirstName(e.target.value)} />
         </div>
         <div className="form-control">
@@ -39,20 +40,25 @@ const ControlledInputs = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-    </article>
+    
 
     {
       people.map(person=> {
         const { id, firstName, email } = person;
-        return <>
+        return (
+
           <div className="item" key={id}>
             <h4>{firstName}</h4>
             <p>{email}</p>
           </div>
-        </>
+        )
+        
       })
     }
-  </>;
+    </article>
+  </>
+  )
+  
 };
 
 export default ControlledInputs;
