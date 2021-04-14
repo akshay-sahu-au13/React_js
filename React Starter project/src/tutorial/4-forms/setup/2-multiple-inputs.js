@@ -17,7 +17,7 @@ const ControlledInputs = () => {
     let name = e.target.name;
     let value = e.target.value;
 
-    setPerson({...person,[name]:value})
+    setPerson({...person, [name]:value})
   }
   const handleSubmit = (e) => {
     e.preventDefault();
