@@ -10,10 +10,11 @@ const ControlledInputs = () => {
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [people, setPeople] = useState([]);
+  const [person, setPerson] = useState({firstName:"", email:"", age:""});
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (firstName && email) {
+    if (firstName && email && age) {
       const person = { id: new Date().getTime().toString(), firstName, email };
       console.log(person);
       setPeople((people) => {
@@ -46,6 +47,16 @@ const ControlledInputs = () => {
               id='email'
               name='email'
               value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className='form-control'>
+            <label htmlFor='age'>Age : </label>
+            <input
+              type='age'
+              id='age'
+              name='age'
+              value={age}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
