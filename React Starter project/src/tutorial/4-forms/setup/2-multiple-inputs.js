@@ -13,21 +13,19 @@ const ControlledInputs = () => {
   const [person, setPerson] = useState({firstName:"", email:"", age:""});
 
   const handleChange = (e)=> {
-    console.log(e);
-    let firstName = e.target.value;
-    let email = e.target.value;
-    let age = e.target.value;
+    // console.log(e.target.value);
+    let name = e.target.name;
+    let value = e.target.value;
 
-    setPerson({id: new Date().getTime().toString(),firstName,email,age})
+    setPerson({...person,[name]:value})
   }
   const handleSubmit = (e) => {
     e.preventDefault();
     if (person.firstName && person.email && person.age) {
       // const person = { id: new Date().getTime().toString(), firstName, email };
-      console.log(person);
-      setPeople((people) => {
-        return [...people, person];
-      });
+      // console.log(person);
+      const newPerson = { ...person, id: new Date().getTime().toString()}
+      setPeople([...people, newPerson]);
       // setFirstName('');
       // setEmail('');
       setPerson({ firstName: "", email: "", age: "" })
