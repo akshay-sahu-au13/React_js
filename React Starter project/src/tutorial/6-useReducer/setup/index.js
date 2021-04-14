@@ -28,6 +28,14 @@ const reducer = (state,action) => {
       isModalOpen:false
     }
   }
+
+  if (action.type=="REMOVE_ITEM"){
+    let newPeople = state.people.filter(item=>item.id !== action.payload);
+    return {
+      ...state,
+      people:newPeople
+    }
+  }
   throw new Error ('No matching action type')
 };
 
@@ -72,8 +80,9 @@ const closeModal = ()=> {
 
     {state.people.map(person=> {
       return (
-        <div key={person.id}>
+        <div key={person.id} className="item">
           <h4>{person.name}</h4>
+          <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: person.id })}>remove</button>
         </div>
       )
     })}
