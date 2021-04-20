@@ -70,7 +70,10 @@ class Clock extends React.Component {
         </div>
         <br />
         <br />
-        m: {this.state.time.m} s: {this.state.time.s}
+        <div className="time">
+          Minutes : Seconds
+        </div>
+        <div className="time"> {this.state.time.m}  :  {this.state.time.s}</div>
       </div>
     );
   }
