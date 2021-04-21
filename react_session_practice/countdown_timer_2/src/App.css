@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  margin: auto;
+}
+
+.timer{
+  color: rgb(19, 9, 27);
+  font-size: 5rem;
+}
+
+button{
+  padding: 0.8em;
+  width: 100px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start{
+  background-color: skyblue;
+  margin-right: 20px;
+
+}
+.stop{
+  background-color: rgb(202, 118, 103);
+}
