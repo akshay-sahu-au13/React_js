@@ -10,7 +10,7 @@ const Example = () => {
   console.log(products)
   return (
     <div>
-      <h2>{loading ? 'loading...' : 'data'}</h2>
+      <h2>{loading ? 'loading...' : 'data.'}</h2>
     </div>
   )
 }
