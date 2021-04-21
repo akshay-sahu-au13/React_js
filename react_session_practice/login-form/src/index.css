@@ -39,3 +39,28 @@ button {
   color: azure;
   font-size: 110%;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  padding: 1rem 1.5rem;
+  background-color: rgb(250, 174, 189);
+  color: crimson;
+  font-family: cursive;
+  border-radius: 10px;
+}
+
+.no-error {
+  border-radius: 10px;
+
+  padding: 1rem 1.5rem;
+  background-color: rgb(202, 250, 174);
+  color: rgb(0, 145, 48);
+  font-family: cursive;
+}
