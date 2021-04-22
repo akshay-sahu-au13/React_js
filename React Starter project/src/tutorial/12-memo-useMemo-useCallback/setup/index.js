@@ -22,7 +22,8 @@ const Index = () => {
   )
 }
 
-const BigList = ({ products }) => {
+const BigList = React.memo(({ products }) => {
+  console.log('Biglist called')
   return (
     <section className='products'>
       {products.map((product) => {
@@ -30,13 +31,13 @@ const BigList = ({ products }) => {
       })}
     </section>
   )
-}
+})
 
 const SingleProduct = ({ fields }) => {
   let { name, price } = fields
   price = price / 100
   const image = fields.image[0].url
-
+  console.count("Single item called")
   return (
     <article className='product'>
       <img src={image} alt={name} />
