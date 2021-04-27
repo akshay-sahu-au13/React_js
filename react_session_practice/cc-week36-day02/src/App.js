@@ -6,8 +6,8 @@ function App() {
   return (
     <>
     <Button title="Login"/>
-    <Button title="Sign Up"/>
-    <Button title="About-us"/>
+      <Button title="Sign Up" className="btn-3"/>
+    <Button title="About-us" className="btn-2"/>
     </>
   );
 }
