@@ -1,0 +1,25 @@
+
+
+.Home .mainHeading {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Home .postSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    /* height: auto;
+    margin: auto; */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.Home .postDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
