@@ -1,0 +1,12 @@
+.post-info {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #110331;
+  border: 1px solid #393e46;
+}
