@@ -1,11 +1,21 @@
 import React from 'react';
-
+import optionInput from './optionInput';
 const selectInput = (props) => {
-    const { name, label, value, changeHandler } = props;
+    const { name, label, value, clickHandler, choices  } = props;
     return (
         <div className="form-grp">
             <label htmlFor={name}>{label} :</label>
-            <input type="text" name={name} id={name} value={value} onChange={changeHandler} />
+            <select name={name} id={name}>
+                {
+                
+                    choices.map((choice) => {
+                        return <optionInput value={choice} choice={choice} />
+                    })
+                
+                }
+            </select>
         </div>
     )
 }
+
+export default selectInput;
