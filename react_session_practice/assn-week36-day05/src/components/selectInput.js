@@ -1,7 +1,8 @@
 import React from 'react';
-import optionInput from './optionInput';
-const selectInput = (props) => {
+import OptionInput from './optionInput';
+const SelectInput = (props) => {
     const { name, label, value, clickHandler, choices  } = props;
+    console.log(choices)
     return (
         <div className="form-grp">
             <label htmlFor={name}>{label} :</label>
@@ -9,7 +10,8 @@ const selectInput = (props) => {
                 {
                 
                     choices.map((choice) => {
-                        return <optionInput value={choice} choice={choice} />
+                        console.log(choice)
+                        return <OptionInput value={choice} choice={choice} />
                     })
                 
                 }
@@ -18,4 +20,4 @@ const selectInput = (props) => {
     )
 }
 
-export default selectInput;
+export default SelectInput;

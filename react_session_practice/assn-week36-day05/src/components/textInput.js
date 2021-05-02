@@ -1,7 +1,6 @@
 import React from 'react';
-import numberInput from './numberInput';
 
-const textInput = (props)=> {
+const TextInput = (props)=> {
     const { name, label, value, changeHandler } = props;
     return (
         <div className="form-grp">
@@ -11,5 +10,5 @@ const textInput = (props)=> {
     )
 }
 
-export default numberInput;
+export default TextInput;
 

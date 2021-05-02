@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import textInput from '../components/textInput';
-import numberInput from '../components/numberInput';
-import emailInput from '../components/emailInput';
-import selectInput from '../components/selectInput';
-import button from '../components/button';
-import dateInput from '../components/dateInput';
+import TextInput from '../components/textInput';
+import NumberInput from '../components/numberInput';
+import EmailInput from '../components/emailInput';
+import SelectInput from '../components/selectInput';
+import Button from '../components/button';
+import DateInput from '../components/dateInput';
 
 
 
@@ -42,22 +42,23 @@ class App extends React.Component {
 
   render() {
     return <>
-      <textInput name="title" label="Title" value={this.state.title} changeHandler={this.changeHandler} /> 
-      <textInput name="firstName" label="First Name" value={this.state.firstName} changeHandler={this.changeHandler} />
-      <textInput name="lastName" label="Last Name" value={this.state.lastName} changeHandler={this.changeHandler} />
-      <textInput name="address" label="Address" value={this.state.address} changeHandler={this.changeHandler} />
-      <textInput name="address2" label="Address" value={this.state.address2} changeHandler={this.changeHandler} />
-      <textInput name="city" label="City" value={this.state.city} changeHandler={this.changeHandler} />
-      <textInput name="state" label="State/region" value={this.state.state} changeHandler={this.changeHandler} />
-      <numberInput name="postalCode"  label="Postal Code" value={this.state.postalCode} changeHandler={this.changeHandler}/>
-      <textInput name="country" label="Country" value={this.state.country} changeHandler={this.changeHandler} />
-      <numberInput name="phone" label="Phone" value={this.state.phone} changeHandler={this.changeHandler} />
-      <numberInput name="fax" label="Fax" value={this.state.fax} changeHandler={this.changeHandler} />
-      <emailInput name="email" label="Email" value={this.state.email} changeHandler={this.changeHandler} />
-      <textInput name="ccHolder" label="Credit Card Holder" value={this.state.ccHolder} changeHandler={this.changeHandler} />
-      <selectInput name="creditCard" label="Credit Card" choices={["Visa", "AMEX", "Platinum", "Others"]}/> 
-      <numberInput name="ccNumber" label="Credit Card Number" value={this.state.ccNumber} changeHandler={this.changeHandler} />
-      <dateInput name="expDate" label="Expiration Date" value={this.state.expDate} changeHandler={this.changeHandler} />
+      <TextInput name="title" label="Title" value={this.state.title} changeHandler={this.changeHandler} /> 
+      <TextInput name="firstName" label="First Name" value={this.state.firstName} changeHandler={this.changeHandler} />
+      <TextInput name="lastName" label="Last Name" value={this.state.lastName} changeHandler={this.changeHandler} />
+      <TextInput name="address" label="Address" value={this.state.address} changeHandler={this.changeHandler} />
+      <TextInput name="address2" label="Address" value={this.state.address2} changeHandler={this.changeHandler} />
+      <TextInput name="city" label="City" value={this.state.city} changeHandler={this.changeHandler} />
+      <TextInput name="state" label="State/region" value={this.state.state} changeHandler={this.changeHandler} />
+      <NumberInput name="postalCode"  label="Postal Code" value={this.state.postalCode} changeHandler={this.changeHandler}/>
+      <TextInput name="country" label="Country" value={this.state.country} changeHandler={this.changeHandler} />
+      <NumberInput name="phone" label="Phone" value={this.state.phone} changeHandler={this.changeHandler} />
+      <NumberInput name="fax" label="Fax" value={this.state.fax} changeHandler={this.changeHandler} />
+      <EmailInput name="email" label="Email" value={this.state.email} changeHandler={this.changeHandler} />
+      <TextInput name="ccHolder" label="Credit Card Holder" value={this.state.ccHolder} changeHandler={this.changeHandler} />
+      <SelectInput name="creditCard" label="Credit Card" choices={["Visa", "AMEX", "Platinum", "Others"]}/> 
+      <NumberInput name="ccNumber" label="Credit Card Number" value={this.state.ccNumber} changeHandler={this.changeHandler} />
+      <DateInput name="expDate" label="Expiration Date" value={this.state.expDate} changeHandler={this.changeHandler} />
+      <Button label="Submit" lass="btn" />
     </>
   }
 

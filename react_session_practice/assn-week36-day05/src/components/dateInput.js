@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function dateInput(props) {
+export default function DateInput(props) {
     const { name, label } = props;
     return (
         <div>

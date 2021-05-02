@@ -1,6 +1,6 @@
 import React from 'react';
 
-const emailInput = (props) => {
+const EmailInput = (props) => {
     const { name, label, value, changeHandler } = props;
     return (
         <div className="form-grp">
@@ -10,4 +10,4 @@ const emailInput = (props) => {
     )
 }
 
-export default emailInput;
+export default EmailInput;

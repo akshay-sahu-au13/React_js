@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function button() {
+export default function Button(props) {
+    const {label, Class} = props;
     return (
         <div>
-            <button className='btn'>Submit</button>
+            <button className={Class}>{label}</button>
         </div>
     )
 }

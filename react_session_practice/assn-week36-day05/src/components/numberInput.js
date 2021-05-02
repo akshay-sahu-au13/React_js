@@ -1,6 +1,6 @@
 import React from 'react';
 
-const numberInput = (props) => {
+const NumberInput = (props) => {
     const { name, label, value, changeHandler } = props;
     return (
         <div className="form-grp">
@@ -10,4 +10,4 @@ const numberInput = (props) => {
     )
 }
 
-export default numberInput;
+export default NumberInput;
