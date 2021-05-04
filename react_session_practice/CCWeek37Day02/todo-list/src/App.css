@@ -12,10 +12,12 @@ body {
 
 .container {
   margin: 0 auto;
+  max-width: 650px;
   padding: 30px;
 }
 
 .list {
+  /* max-width: 550px; */
   margin: 30px auto;
   padding: 50px 30px;
   background-color: #eaecef;
@@ -42,4 +44,10 @@ body {
   color: rgb(60, 121, 233);
   background-color: rgb(164, 182, 216);
   transform: translateZ(0.9);
+}
+
+input {
+  padding: 10px 15px;
+  margin: 10px 15px;
+  width: 75%;
 }
