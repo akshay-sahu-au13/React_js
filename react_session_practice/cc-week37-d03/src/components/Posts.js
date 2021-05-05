@@ -32,7 +32,9 @@ export default class Posts extends Component {
         this.fetchData();
     }
 
-    
+    clickHandler = (idx) => {
+        this.fetchData(idx)
+    }
 
     render() {
 
@@ -46,13 +48,18 @@ export default class Posts extends Component {
                         <div><h2>Post List</h2></div>
                         {
                             this.state.posts.map((post, idx) => {
-                                return <Post key={idx} data={post} />
+                                return <Post key={idx} data={post} onClick={()=>this.clickHandler(idx)}/>
                             })
                         }
                     </div>
 
                     <div className="post-details">
-
+                        {
+                            <div className="post">
+                                <h3>{this.state.postInfo.title}</h3>
+                                <p>{this.state.postInfo.body}</p>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
