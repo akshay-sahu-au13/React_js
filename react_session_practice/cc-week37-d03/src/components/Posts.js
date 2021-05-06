@@ -57,7 +57,7 @@ export default class Posts extends Component {
                     <div className="post-details">
                         {
                             this.state.postInfo && 
-                            <div className="post">
+                            <div className="posted">
                                 <h3>{this.state.postInfo.title}</h3>
                                 <p>{this.state.postInfo.body}</p>
                             </div>
