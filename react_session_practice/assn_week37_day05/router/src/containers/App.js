@@ -11,10 +11,10 @@ function App() {
       <div className="container">
         <nav className="navbar">
           <ul>
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/posts">Posts</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            <li className="nav-btn"><Link to="/home">Home</Link></li>
+              <li className="nav-btn"><Link to="/posts">Posts</Link></li>
           </ul>
+            <Link to="/login" className="nav-btn">Login</Link>
         </nav>
         <section>
           <div className="about">
