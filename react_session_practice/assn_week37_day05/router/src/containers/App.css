@@ -148,3 +148,57 @@ section {
   text-decoration: underline;
   text-shadow: 1px 1px 3px rgba(3, 250, 36, 0.616);
 }
+
+form {
+  margin: 3rem auto;
+  background-color: rgba(214, 255, 248, 0.658);
+  padding: 2rem;
+  border-bottom-right-radius: 30px;
+  box-shadow: 2px 2px 5px rgba(30, 128, 255, 0.692);
+  text-align: center;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+  box-shadow: 1px 1px 2px 1px rgba(128, 128, 128, 0.322);
+}
+
+.form-grp {
+  font-size: 125%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(100, 132, 236);
+  color: white;
+  font-size: 120%;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:focus {
+  background-color: teal;
+  transform: scaleX(1.1);
+}
+
+.success,
+.err {
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: rgba(74, 238, 137, 0.815);
+  text-shadow: 1px 1px 1px rgba(0, 161, 0, 0.719);
+}
+
+.err {
+  color: crimson;
+  text-shadow: 1px 1px 1px rgba(253, 38, 0, 0.719);
+}
