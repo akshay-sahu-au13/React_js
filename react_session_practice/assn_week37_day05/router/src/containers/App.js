@@ -4,7 +4,8 @@ import { Route, BrowserRouter, Switch, Link} from 'react-router-dom';
 import Layout from './Layout';
 
 function App() {
-  return (<><div className="container">
+  return (<>
+  <div className="container">
     <BrowserRouter>
     <Layout>
       <h1>App</h1>
