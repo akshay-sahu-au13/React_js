@@ -2,7 +2,9 @@
 import './App.css';
 import { Route, BrowserRouter, Switch, Link} from 'react-router-dom';
 import Layout from './Layout';
-
+import Home from './Home';
+import Login from './Login';
+import Posts from './Posts';
 function App() {
   return (<>
   <div className="container">
@@ -18,6 +20,10 @@ function App() {
             <Link to="/login" className="nav-btn">Login</Link>
         </nav>
         <section>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/posts" component={Posts} />
+          <Route exact path="/login" component={Login} />
+          
           <div className="about">
           </div>
           <div className="exp">
