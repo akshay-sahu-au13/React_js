@@ -28,7 +28,7 @@ nav {
 }
 
 a:focus {
-  text-decoration: 2px solid underline #0890eb;
+  text-decoration: 2px solid underline #9bf3ff;
 }
 
 .nav-btn {
@@ -93,6 +93,7 @@ section {
 }
 
 .posts .body {
+  margin-top: 2rem;
   display: flex;
   width: 80vw;
   justify-content: space-evenly;
@@ -139,4 +140,11 @@ section {
   padding: 1rem 1.5rem;
   border-radius: 50%;
   width: 4rem;
+}
+
+.posts h1 {
+  color: rgb(93, 93, 243);
+  font-size: 200%;
+  text-decoration: underline;
+  text-shadow: 1px 1px 3px rgba(3, 250, 36, 0.616);
 }
