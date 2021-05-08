@@ -9,6 +9,7 @@ body {
   color: rgb(56, 56, 58);
   /* font-size: 62.5%; */
   background-color: rgba(229, 251, 252, 0.534);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -34,8 +35,10 @@ a:focus {
   margin: 10px;
   padding: 10px 20px;
   font-size: 140%;
-  background-color: rgb(205, 255, 247);
-  border-radius: 5px;
+  background: linear-gradient(rgb(177, 223, 253), #4a8af4);
+  border-radius: 3px;
+  border-top-left-radius: 20px;
+  text-shadow: 1px 1px 1px rgba(174, 221, 248, 0.712);
 }
 .container {
   padding: 1rem 2rem;
@@ -81,4 +84,59 @@ section {
   padding: 1rem;
   border-radius: 10px;
   background-color: rgba(226, 221, 200, 0.651);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posts .body {
+  display: flex;
+  width: 80vw;
+  justify-content: space-evenly;
+}
+
+.post-list {
+  background-color: rgb(243, 214, 243);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.post-details {
+  /* margin: 10px; */
+  flex-basis: 50%;
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: rgb(190, 255, 255);
+  padding: 2rem;
+}
+
+.post {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.post p {
+  margin-top: 10px;
+}
+
+.post h2 {
+  margin: 30px auto;
+  font-size: 150%;
+  color: crimson;
+  background-color: rgba(255, 220, 239, 0.884);
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  width: 4rem;
 }

@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { Route, BrowserRouter, Switch, Link} from 'react-router-dom';
 import Layout from './Layout';
@@ -6,6 +6,30 @@ import Home from './Home';
 import Login from './Login';
 import Posts from './Posts';
 function App() {
+
+  const [posts, setPosts] = useState([]);
+  const [info, setInfo] = useState({});
+
+  const fetchPosts = (id) => {
+    const url = id ? "https://jsonplaceholder.typicode.com/posts" : "https://jsonplaceholder.typicode.com/posts/id"
+
+    fetch (url)
+      .then(res =>  res.json())
+      .then (data => {
+        if (id) {
+          setInfo(data)
+        } else {
+          setPosts(data)
+        }
+      });
+  }
+
+  useEffect(() => {
+    fetchPosts();
+
+  }, [])
+
+
   return (<>
   <div className="container">
     <BrowserRouter>
