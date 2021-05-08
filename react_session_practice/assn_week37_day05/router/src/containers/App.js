@@ -10,7 +10,7 @@ function App() {
   <div className="container">
     <BrowserRouter>
     <Layout>
-      <h1>App</h1>
+      {/* <h1>App</h1> */}
       <div className="container">
         <nav className="navbar">
           <ul>
@@ -23,11 +23,8 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/posts" component={Posts} />
           <Route exact path="/login" component={Login} />
-          
-          <div className="about">
-          </div>
-          <div className="exp">
-          </div>
+
+       
         </section>
       </div>
       </Layout>

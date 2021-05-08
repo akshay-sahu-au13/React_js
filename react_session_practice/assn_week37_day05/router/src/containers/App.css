@@ -7,7 +7,7 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(56, 56, 58);
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   background-color: rgba(229, 251, 252, 0.534);
 }
 
@@ -33,7 +33,7 @@ a:focus {
 .nav-btn {
   margin: 10px;
   padding: 10px 20px;
-  font-size: 180%;
+  font-size: 140%;
   background-color: rgb(205, 255, 247);
   border-radius: 5px;
 }
@@ -61,4 +61,24 @@ section {
 
 .exp {
   margin: 2rem auto;
+}
+
+.home {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 248, 220, 0.479);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(177, 176, 176, 0.534);
+}
+
+.about {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(250, 237, 185);
+}
+
+.exp {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(226, 221, 200, 0.651);
 }
