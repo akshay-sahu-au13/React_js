@@ -202,3 +202,13 @@ input {
   color: crimson;
   text-shadow: 1px 1px 1px rgba(253, 38, 0, 0.719);
 }
+
+.back {
+  padding: 10px;
+  margin: 3rem 2rem;
+  background-color: #f4b8fc;
+  border-radius: 10px;
+  color: rgb(14, 3, 3);
+  width: max-content;
+  cursor: pointer;
+}

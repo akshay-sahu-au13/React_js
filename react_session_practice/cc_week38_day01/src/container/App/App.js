@@ -3,6 +3,7 @@ import './App.css';
 import {Route, BrowserRouter, Switch} from 'react-router-dom';
 // import Button from '../../Button';
 import Posts from '../Posts';
+import Post from '../Post';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <h1>App</h1>
       <Switch>
         <Route exact path="/posts" component={Posts} />
+        <Route exact path="/posts/:id" component={Post} />
       </Switch>
     </BrowserRouter>
     </>

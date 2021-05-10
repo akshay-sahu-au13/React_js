@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from 'react';
 
-function Posts() {
-
+function Posts(props) {
+    const {history, location, match} = props;
+    console.log("History: ", history)
+    console.log("Location", location)
+    console.log("Match", match)
     const [posts, setPosts] = useState([]);
     
-
+    const clickHandler = (id) => {
+        history.push(`/posts/${id}`);
+    }
     const fetchData = ()=> {
         const url = "https://jsonplaceholder.typicode.com/posts";
         fetch(url)
@@ -28,9 +33,9 @@ function Posts() {
                 <div className="posts">
                     {
                         posts.map(post=> {
-                            return <div className="post" key={[post.id]}>
+                            return <div className="post" key={[post.id]} onClick={()=>clickHandler(post.id)}>
                                 <h3>{post.title}</h3>
-                                <p>post.body</p>
+                                <p>{post.body}</p>
                             </div>
                         })
                     }
