@@ -1,38 +1,204 @@
-.btn-1 {
-  padding: 5px 10px;
-  border: none;
-  border-bottom: 1px solid #85ffff;
-  border-radius: 5px;
-  color: #0752a8;
-  background-image: linear-gradient(#99f0ff, #5086fc);
-  font-size: 110%;
-  font-weight: 500;
-  margin: 10px;
-  box-shadow: 2px 2px 5px 1px rgba(159, 193, 255, 0.726);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.btn-2 {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  color: #fff1fc;
-  background-image: linear-gradient(#fdb6fa, #fa35a8);
-  font-size: 110%;
-  font-weight: 500;
-  margin: 10px;
-  box-shadow: 2px 2px 5px 1px rgba(255, 183, 239, 0.726);
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(56, 56, 58);
+  /* font-size: 62.5%; */
+  background-color: rgba(229, 251, 252, 0.534);
+  scroll-behavior: smooth;
 }
 
-.btn-3 {
-  padding: 5px 10px;
-  border: none;
-  border-left: 10px solid #00a72a;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  color: #007a14;
-  background-image: linear-gradient(#fffab0, #00ce11);
-  font-size: 110%;
-  font-weight: 500;
+a {
+  text-decoration: none;
+  color: rgb(83, 84, 102);
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  width: 75vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+a:focus {
+  text-decoration: 2px solid underline #9bf3ff;
+}
+
+.nav-btn {
   margin: 10px;
-  box-shadow: 2px 2px 3px 0px rgba(151, 255, 207, 0.726);
+  padding: 10px 20px;
+  font-size: 140%;
+  background: linear-gradient(rgb(177, 223, 253), #4a8af4);
+  border-radius: 3px;
+  border-top-left-radius: 20px;
+  text-shadow: 1px 1px 1px rgba(174, 221, 248, 0.712);
+}
+.container {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  /* color: black; */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about {
+  margin-top: 2rem;
+}
+
+.exp {
+  margin: 2rem auto;
+}
+
+.home {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 248, 220, 0.479);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(177, 176, 176, 0.534);
+}
+
+.about {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(250, 237, 185);
+}
+
+.exp {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(226, 221, 200, 0.651);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posts .body {
+  margin-top: 2rem;
+  display: flex;
+  width: 80vw;
+  justify-content: space-evenly;
+}
+
+.post-list {
+  background-color: rgb(243, 214, 243);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.post-details {
+  /* margin: 10px; */
+  flex-basis: 50%;
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: rgb(190, 255, 255);
+  padding: 2rem;
+}
+
+.post {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.post p {
+  margin-top: 10px;
+}
+
+.post h2 {
+  margin: 30px auto;
+  font-size: 150%;
+  color: crimson;
+  background-color: rgba(255, 220, 239, 0.884);
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.posts h1 {
+  color: rgb(93, 93, 243);
+  font-size: 200%;
+  text-decoration: underline;
+  text-shadow: 1px 1px 3px rgba(3, 250, 36, 0.616);
+}
+
+form {
+  margin: 3rem auto;
+  background-color: rgba(214, 255, 248, 0.658);
+  padding: 2rem;
+  border-bottom-right-radius: 30px;
+  box-shadow: 2px 2px 5px rgba(30, 128, 255, 0.692);
+  text-align: center;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+  box-shadow: 1px 1px 2px 1px rgba(128, 128, 128, 0.322);
+}
+
+.form-grp {
+  font-size: 125%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(100, 132, 236);
+  color: white;
+  font-size: 120%;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:focus {
+  background-color: teal;
+  transform: scaleX(1.1);
+}
+
+.success,
+.err {
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: rgba(74, 238, 137, 0.815);
+  text-shadow: 1px 1px 1px rgba(0, 161, 0, 0.719);
+}
+
+.err {
+  color: crimson;
+  text-shadow: 1px 1px 1px rgba(253, 38, 0, 0.719);
 }
