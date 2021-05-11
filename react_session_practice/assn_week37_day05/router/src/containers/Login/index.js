@@ -1,70 +1,107 @@
-import React, { useState, useEffect} from 'react';
-function Login() {
+const redux = require('redux');
+const fetch = require('isomorphic-fetch')
+const createStore = redux.createStore;
 
-    const [ value, setValue ] = useState({});
-    const [formData, setFormData] = useState({});
-    const [submit, setSubmit] = useState(false)
-
-    const changeHandler = (e) => {
-        setValue({
-            [e.target.name] : e.target.value
-        })
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const submitHandler = (e) => {
-        e.preventDefault();
-        if (formData.password && formData.email && formData.age){
-            setSubmit(true)
-        } else {
-            setSubmit("error")
-        }
-        console.log(formData)
-    }
-
-    return (
-        <div className="login">
-            <h2 className="err">{submit === "error" ? "Please fill all the fields..." : ""}</h2>
-            <h2 className="success">{submit === true ? "Form Submitted Successfully...": ""}</h2>
-            
-            <form method="post" onSubmit={submitHandler}>
-
-                <div className="form-grp">
-                    <label htmlFor="name">
-                        Name: 
-                    </label>
-                    <input type="text" name="name" id="name" value={value.name} onChange={changeHandler} />
-                </div>
-
-                <div className="form-grp">
-                    <label htmlFor="age">
-                        Age: 
-                    </label>
-                    <input type="number" name="age" id="age" value={value.age} onChange={changeHandler} />
-                </div>
-
-                <div className="form-grp">
-                    <label htmlFor="email">
-                        Email: 
-                    </label>
-                    <input type="email" name="email" id="email" value={value.email} onChange={changeHandler} />
-                </div>
-
-                <div className="form-grp">
-                    <label htmlFor="password">
-                        Password:
-                    </label>
-                    <input type="password" name="password" id="password" value={value.password} onChange={changeHandler} />
-                </div>
-
-                <button type="submit" className="btn"> Login </button>
-
-            </form>
-        </div>
-    )
+const initialState = {
+    counter: 0,
+    posts: [],
+    userInfo: {}
 }
 
-export default Login
+const fetchData = async (url) => {
+    try {
+
+        const data = await fetch(url);
+        const finaldata = await data.json()
+
+        return finaldata
+
+    } catch (error) {
+        if (error) {
+            console.log(error)
+        }
+    }
+
+}
+
+const reducer = (state, action) => {
+
+    console.log("Reducer state -->", state);
+    console.log("Reducer Action -->", action);
+
+    state = state || initialState;
+    if (action.type === "INCREMENT") {
+        return {
+            ...state,
+            counter: state.counter + 1
+        }
+    }
+
+    if (action.type === "DECREMENT") {
+        return {
+            ...state,
+            counter: state.counter - 1
+        }
+    }
+
+    if (action.type === "ADD_POSTS") {
+        const data = fetchData(action.url);
+        return data.then(d => {
+            state = {
+                ...state,
+                posts: d
+            }
+            return state
+        })
+
+    }
+
+    if (action.type === "GET_INFO") {
+        const info = fetchData(action.url)
+        return info.then(i => {
+            state = {
+                ...state,
+                userInfo: i
+            }
+            return state
+        })
+    }
+
+    console.log("Initial state -->", state)
+
+    return state
+}
+
+const incrementAction = () => ({
+    type: "INCREMENT"
+})
+
+const decrementAction = () => ({
+    type: "DECREMENT"
+})
+
+const addAction = () => ({
+    type: "ADD_POSTS",
+    url: "http://jsonplaceholder.typicode.com/posts"
+})
+
+const addInfo = (id) => ({
+    type: "GET_INFO",
+    url: `https://jsonplaceholder.typicode.com/users/${id}`
+})
+
+const store = createStore(reducer);
+
+store.subscribe(async () => {
+    console.log("Listening to the Changes ==> ", await store.getState());
+})
+
+store.dispatch(incrementAction());
+store.dispatch(incrementAction());
+store.dispatch(decrementAction());
+store.dispatch(addAction());
+store.dispatch(addInfo(1));
+store.dispatch(addInfo(2));
+
+
+
