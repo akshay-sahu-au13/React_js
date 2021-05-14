@@ -24,30 +24,33 @@ const Products = (props) => {
     console.log("Props after fetch::", props)
 
     return <>
-        <h1>Products</h1>
-        {
-            props.products.map(product => {
-                return <div className="product" key={product.id}>
-                    <div className="left">
-                        <div className="title">
-                            {product.title}
+        <div className="container">
+            <h1>Products</h1>
+            <div className="listing">
+                {
+                    props.products.map(product => {
+                        return <div className="product" key={product.id}>
+                            <div className="left">
+                                <div className="title">
+                                    {product.title}
+                                </div>
+                                <div className="category">
+                                    {product.category}
+                                </div>
+                                <div className="desc">
+                                    {product.description}
+                                </div>
+                            </div>
+                            <div className="right">
+                                <div className="price">
+                                    Buy it for ${product.price}
+                                </div>
+                            </div>
                         </div>
-                        <div className="category">
-                            {product.category}
-                        </div>
-                        <div className="desc">
-                            {product.description}
-                        </div>
-                    </div>
-                    <div className="right">
-                        <div className="price">
-                            {product.price}
-                        </div>
-                    </div>
-                </div>
-            })
-        }
-    
+                    })
+                }
+            </div>
+        </div>
     </>
 }
 
