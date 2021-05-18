@@ -1,5 +1,5 @@
 import TodoAction from '../actions/';
-import todoType from '../actions/actionTypes';
+import actionTypes from '../actions/actionTypes';
 
 const initialState = {
     todoList:[],
@@ -10,21 +10,41 @@ const reducer = (state, action) => {
     state = state || initialState;
 
     switch(action.type) {
-        case todoType.list:
+        case actionTypes.list:
             console.log("State from reducer::",state)
-            const todoList = state.todoList.length ? [...state.todoList, action.payload] : [action.payload]
+            let todoList = state.todoList.length ? [...state.todoList, action.payload] : [action.payload]
 
             return {
                 ...state,
                 todoList: todoList
             };
-        case todoType.add:
+        case actionTypes.add:
             console.log("State from reducer::", state)
 
             return {
                 ...state,
                 todoItem:action.payload
             }
+        case actionTypes.delete:
+             const newList = state.todoList.filter(item=> item !== action.payload)
+            return {
+                ...state,
+                todoList:newList
+            }
+        case actionTypes.done:
+            const doneList = state.todoList.map(item => {
+                if(item === action.payload){
+                    return item + "  ((***DONE***))"
+                } else {
+                    return item
+                }
+            })
+
+            return {
+                ...state,
+                todoList:doneList
+            }
+
         default:
             return state;
     };

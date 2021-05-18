@@ -14,7 +14,19 @@ const TodoAction = {
         }
     },
 
-    
+    removeItem : payload => {
+        return {
+            type: actionTypes.delete,
+            payload
+        }
+    },
+
+    completedItem: payload => {
+        return {
+            type: actionTypes.done,
+            payload
+        }
+    }
 }
 
 export default TodoAction;
