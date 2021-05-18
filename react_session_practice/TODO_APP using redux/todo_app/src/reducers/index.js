@@ -18,7 +18,7 @@ const reducer = (state, action) => {
                 ...state,
                 todoList: todoList
             };
-        case todoType.item:
+        case todoType.add:
             console.log("State from reducer::", state)
 
             return {

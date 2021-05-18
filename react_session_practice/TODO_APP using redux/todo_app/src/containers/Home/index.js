@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import actionTypes from '../../actions/actionTypes';
 import TodoAction from '../../actions'
 import Item from '../Item';
 
@@ -9,7 +8,7 @@ function Home(props) {
     console.log("Todo list Home: ", props.todoList)
 
     const handleChange = (e) => {
-
+        console.log(e.target)
         props.dispatch(TodoAction.enterItem(e.target.value))
     }
 
@@ -24,8 +23,6 @@ function Home(props) {
     return (
         <div className="home">
       
-            
-
             <div className="add-todo">
                 <h1>ToDo List</h1>
                 <form onSubmit={handleSubmit}>

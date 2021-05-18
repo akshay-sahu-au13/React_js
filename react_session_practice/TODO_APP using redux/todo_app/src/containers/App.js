@@ -5,7 +5,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>App</h1>
+
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>

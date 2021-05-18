@@ -1,5 +1,8 @@
 
 export default {
     list: "TODO/LIST",
-    item:"TODO_ITEM"
+    add:"ADD_ITEM",
+    delete:"DELETE_ITEM",
+    edit:"EDIT_ITEM",
+    done:"COMPLETED_ITEM"
 }

@@ -9,10 +9,12 @@ const TodoAction = {
     },
     enterItem: payload => {
         return {
-            type:actionTypes.item,
+            type:actionTypes.add,
             payload
         }
-    }
+    },
+
+    
 }
 
 export default TodoAction;
