@@ -1,11 +1,49 @@
-import React from 'react'
+import React, {useEffect} from 'react';
+import {connect} from 'react-redux';
+import actionTypes from '../../actions/actionTypes';
+import TodoAction from '../../actions'
+import Item from '../Item';
 
-function Home() {
+function Home(props) {
+    console.log("Props from Home: ", props)
+    console.log("Todo list Home: ", props.todoList)
+
+    const handleChange = (e) => {
+
+        props.dispatch(TodoAction.enterItem(e.target.value))
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(e.target)
+        console.log(e.target[0].value)
+        props.dispatch(TodoAction.todolist(e.target[0].value))
+
+    }
+
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="home">
+      
+            
+
+            <div className="add-todo">
+                <h1>ToDo List</h1>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" name="todo" id="todo" value={props.todoItem} onChange={handleChange} placeholder="Enter an item"/>
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+            <div className="todo-list">
+                {
+                    props.todoList.map((item, id) => {
+                        return <Item key={id} item={item} />
+                    })
+                }
+            </div>
         </div>
     )
 }
 
-export default Home
+const mapStateToProps = (storeData) => ({...storeData,todoList: storeData.todoList })
+
+export default connect(mapStateToProps)(Home);
