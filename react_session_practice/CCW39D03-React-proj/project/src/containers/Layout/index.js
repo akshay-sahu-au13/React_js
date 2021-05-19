@@ -1,11 +1,14 @@
 import React from 'react'
-
-function Layout() {
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+function Layout(props) {
     return (
         <div>
-            <h1>Layout</h1>
+            <Navbar />
+            {props.children}
+            <Footer />
         </div>
     )
 }
 
-export default Layout
+export default Layout;

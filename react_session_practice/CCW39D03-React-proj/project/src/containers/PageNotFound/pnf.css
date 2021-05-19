@@ -1,0 +1,20 @@
+.not-found {
+  text-align: center;
+}
+
+h1 {
+  text-transform: capitalize;
+  color: red;
+}
+
+.go-back {
+  background-color: rgba(46, 139, 86, 0.603);
+  color: midnightblue;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 30px auto;
+}
+
+.go-back-link {
+  text-transform: uppercase;
+}
