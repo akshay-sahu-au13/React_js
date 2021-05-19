@@ -5,3 +5,9 @@
 .App {
   text-align: center;
 }
+
+.section {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}

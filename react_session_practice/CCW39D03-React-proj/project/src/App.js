@@ -10,14 +10,15 @@ function App() {
       {/* <h1>App</h1> */}
     <BrowserRouter>
       <Layout>
-        <Switch>
-          {
-          Routes.map((route, id) => {
-            return <Route key={id} {...route} />
-          })
-          }
-
-        </Switch>
+        <div className="section">
+          <Switch>
+            {
+            Routes.map((route, id) => {
+              return <Route key={id} {...route} />
+            })
+            }
+          </Switch>
+        </div>
       </Layout>
     
     </BrowserRouter>

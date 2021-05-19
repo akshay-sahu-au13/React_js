@@ -1,0 +1,16 @@
+.footer {
+  background-color: cadetblue;
+  padding-top: 1rem;
+}
+
+p {
+  margin: 1rem auto;
+}
+
+.icons {
+  padding: 1rem;
+}
+
+.icons span {
+  margin: 0 10px;
+}
