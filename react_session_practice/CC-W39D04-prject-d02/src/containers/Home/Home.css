@@ -1,0 +1,26 @@
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  background-color: azure;
+  width: 100vw;
+}
+
+.video-card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  max-width: 22vw;
+  background-color: rgb(236, 254, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px 2px rgb(165, 165, 165);
+}
+
+.video-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
