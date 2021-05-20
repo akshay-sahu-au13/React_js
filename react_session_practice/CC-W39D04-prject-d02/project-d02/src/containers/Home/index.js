@@ -19,11 +19,11 @@ function Home(props) {
             
             {
                 props.video.map((item, id) => {
-                    console.log(item)
+                    // console.log(item)
                     const { snippet: { title, description, thumbnails: { medium } } } = item;
                     return <div key={id} className="video-card">
                         <img src={medium.url} alt={`video ${id}`}/>
-                            <h3>{title}</h3>
+                            <h4>{title}</h4>
                             <p>{description}</p>
 
                     </div>
