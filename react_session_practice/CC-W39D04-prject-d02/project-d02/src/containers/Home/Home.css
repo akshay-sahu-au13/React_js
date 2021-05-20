@@ -20,13 +20,19 @@
   padding: 0.75rem;
   width: 23vw;
   min-width: 310px;
-  background-color: rgb(226, 246, 255);
+  background-color: rgba(160, 108, 255, 0.082);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
-  box-shadow: 1px 1px 8px 1px rgba(165, 165, 165, 0.692);
+  box-shadow: 1px 1px 10px rgba(160, 108, 255, 0.582);
+  transition: all 0.3s;
+}
+
+.video-card:hover {
+  transform: translate(-5px);
+  box-shadow: 3px 3px 8px rgba(45, 0, 129, 0.507);
 }
 
 .video-card img {
