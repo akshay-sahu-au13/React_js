@@ -43,7 +43,8 @@
 }
 
 .video-card h4 {
-  color: rgb(4, 32, 73);
+  color: #095dbd;
+  font-size: 105%;
   margin-bottom: 2%;
 }
 
