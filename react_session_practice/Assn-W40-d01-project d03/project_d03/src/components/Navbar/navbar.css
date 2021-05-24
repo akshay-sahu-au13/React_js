@@ -29,3 +29,9 @@ li {
   /* color: blue; */
   font-size: 2rem;
 }
+
+.link {
+  font-weight: 600;
+  text-decoration: none;
+  color: aliceblue;
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import './navbar.css';
 import SearchBar from '../Search';
-import AuthButtons from '../AuthButtons'
+import AuthButtons from '../AuthButtons';
+import { Link } from 'react-router-dom';
+import PATHS from '../../config/webPaths';
 function Navbar() {
     return (
         <nav>
@@ -12,16 +14,13 @@ function Navbar() {
                             movie_filter
                         </span>
                     </li>
-                    <li><span>Home</span></li>
+                    <li><Link className="link" to={PATHS.HOME}> Home </Link></li>
                 </ul>
             </div>
             <SearchBar />
 
             <div className="nav-menu">
-                <ul>
-                    <li><span>Profile</span></li>
-                    <li><span>Logout</span></li>
-                </ul>
+                <AuthButtons />
             </div>
         </nav>
     )
