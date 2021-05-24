@@ -6,9 +6,6 @@ export const videoTypes = {
     list: "video/VIDEO_LIST"
 }
 
-export const profileTypes = {
-    details: "profile/PROFILE_DETAILS"
-}
 
 export const authTypes = {
     login: "auth/USER_LOGIN",
@@ -20,3 +17,7 @@ export const loaderTypes = {
     stop: "loader/STOP_LOADING"
 }
 
+export const profileTypes = {
+    getDetails: 'profile/PROFILE_GET_DETAILS',
+    removeDetails: 'profile/PROFILE_REMOVE_DETAILS'
+}

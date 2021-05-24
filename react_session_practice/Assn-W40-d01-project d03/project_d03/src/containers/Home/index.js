@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import './Home.css';
 import {connect} from 'react-redux';
-import {videoTypes} from '../../actionTypes';
 import videoActions from '../../actions/videoActions'
 
 function Home(props) {

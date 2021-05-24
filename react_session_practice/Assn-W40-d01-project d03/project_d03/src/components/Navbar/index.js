@@ -1,6 +1,7 @@
 import React from 'react';
 import './navbar.css';
 import SearchBar from '../Search';
+import AuthButtons from '../AuthButtons'
 function Navbar() {
     return (
         <nav>
