@@ -16,6 +16,10 @@ ul {
   margin-right: 20px;
 }
 
+.nav-menu {
+  margin-right: 2vw;
+}
+
 .nav-menu ul {
   display: flex;
 }
@@ -31,6 +35,7 @@ li {
 }
 
 .link {
+  font-size: 120%;
   font-weight: 600;
   text-decoration: none;
   color: aliceblue;

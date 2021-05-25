@@ -76,7 +76,7 @@ const AuthButtons = () => {
                     clientId={googleConfig.clientId}
                     onSuccess={onLogin}
                     onFailure={onLogin}
-                    buttonText="Login"
+                    buttonText="Login.."
                     isSignedIn={true}
                     render={renderProps => (
                         <IconButton
