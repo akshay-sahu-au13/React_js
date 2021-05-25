@@ -73,6 +73,7 @@ const AuthButtons = () => {
         {
                 !auth &&
                 <GoogleLogin
+                    
                     clientId={googleConfig.clientId}
                     onSuccess={onLogin}
                     onFailure={onLogin}
@@ -80,6 +81,7 @@ const AuthButtons = () => {
                     isSignedIn={true}
                     render={renderProps => (
                         <IconButton
+                            style={{fontWeight:300}}
                             aria-label="login user"
                             aria-controls="primary-search-login-menu"
                             aria-haspopup="true"

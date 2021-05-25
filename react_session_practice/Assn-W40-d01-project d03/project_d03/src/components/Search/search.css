@@ -1,8 +1,8 @@
 .search-bar input {
-  padding: 10px 15px;
+  padding: 10px 13px;
   border-radius: 5px;
   border: none;
-  background-color: #56a3fcd0;
+  background-color: #56a3fc9d;
   width: 40vw;
 }
 
@@ -13,7 +13,7 @@
 
 #search-icon {
   margin-left: 2px;
-  padding: 6px;
+  padding: 5px;
   /* background-color: rgb(207, 112, 112); */
   border: 1px dotted paleturquoise;
   transition: 0.2s;

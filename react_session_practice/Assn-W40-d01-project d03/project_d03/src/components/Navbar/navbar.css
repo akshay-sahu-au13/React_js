@@ -7,13 +7,8 @@ nav {
 }
 
 span {
-  font-size: 110%;
-  font-weight: 600;
-}
-
-ul {
-  list-style: none;
-  margin-right: 20px;
+  font-size: 105%;
+  font-weight: 500;
 }
 
 .nav-menu {
@@ -22,20 +17,23 @@ ul {
 
 .nav-menu ul {
   display: flex;
+  align-items: center;
+  list-style: none;
 }
 
-li {
-  margin: 10px;
-  padding: 1rem;
+.nav-menu ul li {
+  margin: 1vw;
+  padding: 1vw;
 }
 
 #logo {
   /* color: blue; */
+  padding-top: 0.6vw;
   font-size: 2rem;
 }
 
 .link {
-  font-size: 120%;
+  font-size: 115%;
   font-weight: 600;
   text-decoration: none;
   color: aliceblue;
