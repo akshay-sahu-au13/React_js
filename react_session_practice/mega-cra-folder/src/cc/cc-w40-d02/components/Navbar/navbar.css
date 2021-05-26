@@ -1,0 +1,40 @@
+nav {
+  background-color: rgb(26, 109, 204);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  font-size: 105%;
+  font-weight: 500;
+}
+
+.nav-menu {
+  margin-right: 2vw;
+}
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-menu ul li {
+  margin: 1vw;
+  padding: 1vw;
+}
+
+#logo {
+  /* color: blue; */
+  padding-top: 0.6vw;
+  font-size: 2rem;
+}
+
+.link {
+  font-size: 115%;
+  font-weight: 600;
+  text-decoration: none;
+  color: aliceblue;
+}
