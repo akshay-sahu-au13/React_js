@@ -34,5 +34,5 @@ function Home(props) {
 }
 
 const mapStatetoProps = (state) => ({...state, video:state.video})
-
+console.log("Connect HOC: ",connect(mapStatetoProps))
 export default connect(mapStatetoProps)(Home);
